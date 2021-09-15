@@ -38,11 +38,31 @@
                                 <state key="normal" title="Example 2">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="example2ButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vNw-5E-aDF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ghh-Pw-W8e">
+                                <rect key="frame" x="40" y="274" width="334" height="42"/>
+                                <color key="backgroundColor" systemColor="systemGrayColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="RUv-vh-JXo"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="42" id="aaA-eX-zoc"/>
+                                </constraints>
+                                <state key="normal" title="Example 3">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="example3ButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AmG-xq-mqh"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="ghh-Pw-W8e" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="1Pl-2K-F6l"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ghh-Pw-W8e" secondAttribute="trailing" constant="40" id="Da2-RJ-pTv"/>
+                            <constraint firstItem="ghh-Pw-W8e" firstAttribute="top" secondItem="0Dc-bx-PjZ" secondAttribute="bottom" constant="26" id="FwX-cq-lIP"/>
                             <constraint firstItem="0Dc-bx-PjZ" firstAttribute="top" secondItem="fzC-Vd-n3U" secondAttribute="bottom" constant="26" id="KQE-dC-QiF"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0Dc-bx-PjZ" secondAttribute="trailing" constant="40" id="dgk-R0-bPb"/>
                             <constraint firstItem="0Dc-bx-PjZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="eLU-ep-cSV"/>
