@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="k3J-GJ-PK8">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!-- Call Multiple APIs With Dispatch Group-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Call_Multiple_APIs" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wrx-j9-upf">
+                                <rect key="frame" x="30" y="123" width="354" height="40"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="SqC-xW-UCT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <state key="normal" title="Call API">
+                                    <color key="titleColor" red="0.9999160171" green="1" blue="0.99987202880000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="callAPIButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XWX-PR-0UN"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="API Response from API 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q0b-0P-BfM">
+                                <rect key="frame" x="30" y="193" width="195" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="bP0-fh-Coo"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="API Response from API 2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JgK-zd-7b6">
+                                <rect key="frame" x="30" y="250" width="197" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="9Ju-TX-XPV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="API Response from API 3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OQh-Zc-Atd">
+                                <rect key="frame" x="30" y="305" width="197" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="U3W-3l-l6i"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sCj-0B-MDm">
+                                <rect key="frame" x="30" y="222" width="354" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jrP-ud-la7">
+                                <rect key="frame" x="30" y="279" width="354" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pc4-10-xkB">
+                                <rect key="frame" x="30" y="334" width="354" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Pc4-10-xkB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="6Yh-As-Lwh"/>
+                            <constraint firstItem="jrP-ud-la7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="9zs-1Q-Uw9"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Pc4-10-xkB" secondAttribute="trailing" constant="30" id="CO2-r9-q6x"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wrx-j9-upf" secondAttribute="trailing" constant="30" id="J88-PQ-q0P"/>
+                            <constraint firstItem="JgK-zd-7b6" firstAttribute="top" secondItem="sCj-0B-MDm" secondAttribute="bottom" constant="10" id="Jrb-NR-mW6"/>
+                            <constraint firstItem="OQh-Zc-Atd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="LIe-IU-GEc"/>
+                            <constraint firstItem="jrP-ud-la7" firstAttribute="top" secondItem="JgK-zd-7b6" secondAttribute="bottom" constant="8" id="Mls-bo-dGp"/>
+                            <constraint firstItem="sCj-0B-MDm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="OdU-RS-Od3"/>
+                            <constraint firstItem="sCj-0B-MDm" firstAttribute="top" secondItem="Q0b-0P-BfM" secondAttribute="bottom" constant="8" id="R1C-1l-MsD"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="sCj-0B-MDm" secondAttribute="trailing" constant="30" id="RBJ-y0-cQk"/>
+                            <constraint firstItem="Q0b-0P-BfM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="XbI-6M-5Kz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jrP-ud-la7" secondAttribute="trailing" constant="30" id="Xtc-Y5-wWU"/>
+                            <constraint firstItem="wrx-j9-upf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="35" id="cuz-KJ-ugL"/>
+                            <constraint firstItem="Pc4-10-xkB" firstAttribute="top" secondItem="OQh-Zc-Atd" secondAttribute="bottom" constant="8" id="dz3-P4-inB"/>
+                            <constraint firstItem="OQh-Zc-Atd" firstAttribute="top" secondItem="jrP-ud-la7" secondAttribute="bottom" constant="8" id="n9e-X3-y4U"/>
+                            <constraint firstItem="JgK-zd-7b6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="phF-cY-RV8"/>
+                            <constraint firstItem="Q0b-0P-BfM" firstAttribute="top" secondItem="wrx-j9-upf" secondAttribute="bottom" constant="30" id="rr2-1P-kpU"/>
+                            <constraint firstItem="wrx-j9-upf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="rsG-yb-Lan"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title=" Call Multiple APIs With Dispatch Group" id="dlB-0C-Uib"/>
+                    <connections>
+                        <outlet property="apiResponseHeading1" destination="Q0b-0P-BfM" id="xb7-DW-S1O"/>
+                        <outlet property="apiResponseHeading2" destination="JgK-zd-7b6" id="QBw-iu-lhC"/>
+                        <outlet property="apiResponseHeading3" destination="OQh-Zc-Atd" id="JK8-26-Wub"/>
+                        <outlet property="apiResponseValu1" destination="sCj-0B-MDm" id="OhH-WM-k2y"/>
+                        <outlet property="apiResponseValu2" destination="jrP-ud-la7" id="ExR-Kf-w88"/>
+                        <outlet property="apiResponseValu3" destination="Pc4-10-xkB" id="CGh-0a-CBy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1005.7971014492755" y="88.392857142857139"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="tHu-Ld-mSl">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="k3J-GJ-PK8" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="0x3-Rm-XsG">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="y25-WL-dER"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Twa-SU-D4D" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="95.652173913043484" y="88.392857142857139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

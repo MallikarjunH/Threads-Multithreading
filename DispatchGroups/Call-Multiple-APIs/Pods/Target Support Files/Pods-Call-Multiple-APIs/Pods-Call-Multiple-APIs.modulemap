@@ -1,0 +1,6 @@
+framework module Pods_Call_Multiple_APIs {
+  umbrella header "Pods-Call-Multiple-APIs-umbrella.h"
+
+  export *
+  module * { export * }
+}
