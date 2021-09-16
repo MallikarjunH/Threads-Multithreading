@@ -15,6 +15,10 @@
 		C125E6CD26F1CA2500512355 /* Downloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C125E6CC26F1CA2500512355 /* Downloader.swift */; };
 		C125E6D126F1D74900512355 /* OperationQueueExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = C125E6D026F1D74900512355 /* OperationQueueExample.swift */; };
 		C125E6D426F1D76000512355 /* BlockOperationExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = C125E6D326F1D76000512355 /* BlockOperationExample.swift */; };
+		C125E70326F335B200512355 /* ImgListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C125E70226F335B200512355 /* ImgListTableViewController.swift */; };
+		C125E70726F338D200512355 /* ImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C125E70626F338D200512355 /* ImageTableViewCell.swift */; };
+		C125E73226F36B5800512355 /* NonBlockingUIWhileDownloadingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C125E73126F36B5800512355 /* NonBlockingUIWhileDownloadingVC.swift */; };
+		C125E73526F36B7600512355 /* BlockingUIWhileDownloadingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C125E73426F36B7600512355 /* BlockingUIWhileDownloadingVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +32,10 @@
 		C125E6CC26F1CA2500512355 /* Downloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Downloader.swift; sourceTree = "<group>"; };
 		C125E6D026F1D74900512355 /* OperationQueueExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperationQueueExample.swift; sourceTree = "<group>"; };
 		C125E6D326F1D76000512355 /* BlockOperationExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockOperationExample.swift; sourceTree = "<group>"; };
+		C125E70226F335B200512355 /* ImgListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImgListTableViewController.swift; sourceTree = "<group>"; };
+		C125E70626F338D200512355 /* ImageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTableViewCell.swift; sourceTree = "<group>"; };
+		C125E73126F36B5800512355 /* NonBlockingUIWhileDownloadingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NonBlockingUIWhileDownloadingVC.swift; sourceTree = "<group>"; };
+		C125E73426F36B7600512355 /* BlockingUIWhileDownloadingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockingUIWhileDownloadingVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,13 +72,25 @@
 				C125E6B826F1C9E800512355 /* SceneDelegate.swift */,
 				C125E6D026F1D74900512355 /* OperationQueueExample.swift */,
 				C125E6D326F1D76000512355 /* BlockOperationExample.swift */,
+				C125E70526F338B300512355 /* TableViewImgList */,
 				C125E6CC26F1CA2500512355 /* Downloader.swift */,
+				C125E73426F36B7600512355 /* BlockingUIWhileDownloadingVC.swift */,
+				C125E73126F36B5800512355 /* NonBlockingUIWhileDownloadingVC.swift */,
 				C125E6BC26F1C9E800512355 /* Main.storyboard */,
 				C125E6BF26F1C9EB00512355 /* Assets.xcassets */,
 				C125E6C126F1C9EB00512355 /* LaunchScreen.storyboard */,
 				C125E6C426F1C9EB00512355 /* Info.plist */,
 			);
 			path = OperationQueueEx2;
+			sourceTree = "<group>";
+		};
+		C125E70526F338B300512355 /* TableViewImgList */ = {
+			isa = PBXGroup;
+			children = (
+				C125E70226F335B200512355 /* ImgListTableViewController.swift */,
+				C125E70626F338D200512355 /* ImageTableViewCell.swift */,
+			);
+			path = TableViewImgList;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,8 +163,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C125E70726F338D200512355 /* ImageTableViewCell.swift in Sources */,
 				C125E6B726F1C9E800512355 /* AppDelegate.swift in Sources */,
+				C125E73226F36B5800512355 /* NonBlockingUIWhileDownloadingVC.swift in Sources */,
 				C125E6CD26F1CA2500512355 /* Downloader.swift in Sources */,
+				C125E70326F335B200512355 /* ImgListTableViewController.swift in Sources */,
+				C125E73526F36B7600512355 /* BlockingUIWhileDownloadingVC.swift in Sources */,
 				C125E6B926F1C9E800512355 /* SceneDelegate.swift in Sources */,
 				C125E6D426F1D76000512355 /* BlockOperationExample.swift in Sources */,
 				C125E6D126F1D74900512355 /* OperationQueueExample.swift in Sources */,
