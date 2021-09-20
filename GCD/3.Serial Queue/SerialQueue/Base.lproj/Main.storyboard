@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="drG-pI-fH2">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Serial Queues-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SerialQueue" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rww-QR-Drj">
+                                <rect key="frame" x="20" y="254.5" width="374" height="45"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="Fwj-dO-FbY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                <state key="normal" title="Simple Example">
+                                    <color key="titleColor" red="0.9999160171" green="1" blue="0.99987202880000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="EcH-is-8Ej" kind="show" id="yYB-li-HDm"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SFs-Jv-CtX">
+                                <rect key="frame" x="20" y="103" width="374" height="101.5"/>
+                                <string key="text">These are queues that, no matter whether you submit synchronous or asynchronous tasks to them, will always execute their tasks in a first-in-first-out (FIFO) fashion, meaning that they can only execute one block object at a time.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ubr-DU-mKR">
+                                <rect key="frame" x="20" y="349.5" width="374" height="45"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="vB1-90-rn1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                <state key="normal" title="API Call Example">
+                                    <color key="titleColor" red="0.9999160171" green="1" blue="0.99987202880000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="fmH-pX-Khg" kind="show" id="y4X-xr-0iN"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ubr-DU-mKR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="8Fo-BA-3ak"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Rww-QR-Drj" secondAttribute="trailing" constant="20" id="9V9-z1-iFx"/>
+                            <constraint firstItem="SFs-Jv-CtX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="15" id="BfA-Cm-ngY"/>
+                            <constraint firstItem="ubr-DU-mKR" firstAttribute="top" secondItem="Rww-QR-Drj" secondAttribute="bottom" constant="50" id="V49-hT-veB"/>
+                            <constraint firstItem="Rww-QR-Drj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="YF4-Km-QXG"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="SFs-Jv-CtX" secondAttribute="trailing" constant="20" id="cKU-YI-Eyg"/>
+                            <constraint firstItem="SFs-Jv-CtX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="hJO-gw-gTw"/>
+                            <constraint firstItem="Rww-QR-Drj" firstAttribute="top" secondItem="SFs-Jv-CtX" secondAttribute="bottom" constant="50" id="kSY-5E-019"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ubr-DU-mKR" secondAttribute="trailing" constant="20" id="ldz-oZ-ukO"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Serial Queues" id="joZ-nB-KsA"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="763.768115942029" y="51.5625"/>
+        </scene>
+        <!--Simple Example-->
+        <scene sceneID="yaJ-jy-W8G">
+            <objects>
+                <viewController id="EcH-is-8Ej" customClass="SimpleExample" customModule="SerialQueue" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Y0W-m3-N7I">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Check the Logs for Execution flow &amp; Check code in Class" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DdH-Xh-Fky">
+                                <rect key="frame" x="20" y="138" width="374" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="FGE-cR-khS"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="DdH-Xh-Fky" firstAttribute="top" secondItem="FGE-cR-khS" secondAttribute="top" constant="50" id="3kG-rE-ejs"/>
+                            <constraint firstItem="FGE-cR-khS" firstAttribute="trailing" secondItem="DdH-Xh-Fky" secondAttribute="trailing" constant="20" id="PiG-1v-y6D"/>
+                            <constraint firstItem="DdH-Xh-Fky" firstAttribute="leading" secondItem="FGE-cR-khS" secondAttribute="leading" constant="20" id="uh8-KS-pdy"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Xhj-kR-d3g"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0nG-H1-r34" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1684.057971014493" y="-112.5"/>
+        </scene>
+        <!--Call Example-->
+        <scene sceneID="qwg-Mj-hkf">
+            <objects>
+                <viewController id="fmH-pX-Khg" customClass="APICallExample" customModule="SerialQueue" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VB0-qk-e2e">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x3t-Z7-FDl">
+                                <rect key="frame" x="20" y="138" width="374" height="45"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="qiq-O7-KB6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                <state key="normal" title="Call APIs">
+                                    <color key="titleColor" red="0.9999160171" green="1" blue="0.99987202880000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="callMultipleAPIs:" destination="fmH-pX-Khg" eventType="touchUpInside" id="7Tz-fO-Bhk"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="hxF-ws-OEf"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="x3t-Z7-FDl" firstAttribute="top" secondItem="hxF-ws-OEf" secondAttribute="top" constant="50" id="1Dp-8O-z9l"/>
+                            <constraint firstItem="x3t-Z7-FDl" firstAttribute="leading" secondItem="hxF-ws-OEf" secondAttribute="leading" constant="20" id="Azw-wE-wfF"/>
+                            <constraint firstItem="hxF-ws-OEf" firstAttribute="trailing" secondItem="x3t-Z7-FDl" secondAttribute="trailing" constant="20" id="BYn-98-IjM"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="hdh-BA-mEb"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ffA-ge-IUZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1684.057971014493" y="602.67857142857144"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="VUJ-PK-9mV">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="drG-pI-fH2" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="69U-iV-0Kv">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Ze7-td-hES"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jsE-WC-OcP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-146.37681159420291" y="51.5625"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

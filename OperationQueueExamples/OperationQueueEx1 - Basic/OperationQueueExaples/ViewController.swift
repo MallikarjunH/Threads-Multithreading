@@ -49,10 +49,11 @@ class ViewController: UIViewController {
         
         //Adding all tasks in a queues - Way 2
         queue.addOperations([task1,task2,task3], waitUntilFinished: true)
+       // queue.addOperations([task1,task2,task3], waitUntilFinished: false) //check with this case and try to execute and check the output
         
-        task1.start() //optional - check it once
-        task2.start() //optional - check it once
-        task3.start() //optional - check it once
+       // task1.start() //optional - check it once
+       // task2.start() //optional - check it once
+       // task3.start() //optional - check it once
         
         print("End of example1 ButtonAction method call")
     }
@@ -91,6 +92,7 @@ class ViewController: UIViewController {
             print("Task 5 Executed")
         }
         
+        
         task5.addDependency(task1) // In this case, task 1 will try to execute, but it wont exrecute task 1 because, Task 1 having dependency to task 2 so, Task 2 will be executed first then it will execute Task 1
         task1.addDependency(task2) // Task 2 will execute first, then it will execute Task 1
         task3.addDependency(task4) // Task 4 will execute first, then it will execute Task 3
@@ -99,7 +101,9 @@ class ViewController: UIViewController {
        // queue.addOperations([task1,task2,task3,task4], waitUntilFinished: true) //waitUntilFinished: false
         queue.addOperations([task1,task2,task3,task4,task5], waitUntilFinished: true) // waitUntilFinished: true = It will execute 1 task at a time, it will block operations
         
+        
         print("End of example2 ButtonAction method call")
+        
     }
     
     @IBAction func example3ButtonAction(_ sender: Any) {

@@ -33,7 +33,7 @@ class ViewController: UIViewController {
         self.apiResponseValu3.isHidden = true
     }
 
-    
+
     @IBAction func callAPIButtonClicked(_ sender: Any) {
         
         //Create Object Of DispatchGroup
@@ -48,6 +48,7 @@ class ViewController: UIViewController {
         
         AF.request("https://jsonplaceholder.typicode.com/todos/1", parameters: nil, headers: nil).validate(statusCode: 200 ..< 299).responseJSON { AFdata in
             do {
+                
                 guard let jsonObject = try JSONSerialization.jsonObject(with: AFdata.data!) as? [String: Any] else {
                     print("Error: Cannot convert data to JSON object")
                     return

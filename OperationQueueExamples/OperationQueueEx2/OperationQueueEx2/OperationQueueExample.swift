@@ -31,7 +31,7 @@ class OperationQueueExample: UIViewController {
         //Note - If you enable next line, it will execte 1 blocks at a time in a sequence e.g Task1, Task2, Task3, Task4
         //if not enabled then it will run asynchronosly - in this case it wont execte in a seqeunce order. e.g Task1, Taks3, Task 2, Task4 or any order dynamically
         
-        //queue.maxConcurrentOperationCount = 1 //Read note information
+       // queue.maxConcurrentOperationCount = 1 //Read note information
         
         queue.addOperation {
             let img1 = Downloader.downloadImageWithURL(self.imageURLs[0])
@@ -45,6 +45,7 @@ class OperationQueueExample: UIViewController {
             }
         }
         
+    
         queue.addOperation {
             let img2 = Downloader.downloadImageWithURL(self.imageURLs[1])
             print("2")

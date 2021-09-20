@@ -37,6 +37,8 @@ class BlockingUIWhileDownloadingVC: UIViewController {
         
         let img4 = Downloader.downloadImageWithURL(imageURLs[3])
         imageView4.image = img4
+        
+        // or using DispatchQueue.main.async { } ..etc method
     }
     
 }
